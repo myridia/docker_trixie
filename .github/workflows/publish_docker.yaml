@@ -28,7 +28,7 @@ jobs:
         id: meta
         uses: docker/metadata-action@9ec57ed1fcdbf14dcef7dfbe97b2010124a938b7
         with:
-          images: myridia/php8.4fpm
+          images: myridia/docker_trixie
 
       - name: Build and push Docker image
         id: push
@@ -38,6 +38,6 @@ jobs:
           file: ./Dockerfile
           push: true
           #tags: ${{ steps.meta.outputs.tags }}
-          tags: myridia/php8.4fpm:latest
+          tags: myridia/docker_trixie:latest
           labels: ${{ steps.meta.outputs.labels }}
 
