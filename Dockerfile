@@ -29,7 +29,9 @@ libncursesw5-dev \
 libgdbm-dev \              
 libffi-dev \               
 python3-dev \              
-ruby-dev                   
+ruby-dev \
+rsync
+
 
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
