@@ -30,7 +30,8 @@ libgdbm-dev \
 libffi-dev \               
 python3-dev \              
 ruby-dev \
-rsync
+rsync \
+tree 
 
 
 
