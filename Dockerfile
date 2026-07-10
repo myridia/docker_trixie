@@ -1,7 +1,8 @@
 FROM node:20-trixie
 LABEL maintainer="info@myridia.com"
 
-RUN apt-get update && apt-get install -y \
+RUN apt-get update && apt-get upgrade -y 
+RUN apt-get install -y \
 libfreetype-dev \
 libjpeg62-turbo-dev \
 libpng-dev \
