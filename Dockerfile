@@ -32,9 +32,10 @@ libffi-dev \
 python3-dev \              
 ruby-dev \
 rsync \
-tree 
+tree \
+pipx 
 
-
+RUN pipx install poetry 
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
 
