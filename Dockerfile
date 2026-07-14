@@ -35,9 +35,12 @@ rsync \
 tree \
 pipx 
 
-RUN pipx install poetry 
 
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
+
+RUN pipx install poetry && pipx ensurepath
+
+
 
 WORKDIR /app
 
