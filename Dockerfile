@@ -39,6 +39,7 @@ pipx
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
 
 RUN pipx install poetry && pipx ensurepath
+ENV PATH="/root/.local/bin:$PATH"
 
 
 
