@@ -42,6 +42,12 @@ proxychains4
 RUN curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y 
 
 RUN pipx install poetry && pipx ensurepath
+
+RUN wget https://packages.microsoft.com/config/debian/13/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+RUN dpkg -i packages-microsoft-prod.deb 
+RUN apt-get update
+RUN apt-get install -y dotnet-sdk-10.0 aspnetcore-runtime-10.0
+
 ENV PATH="/root/.local/bin:$PATH"
 
 
